@@ -1,0 +1,1 @@
+web: gunicorn gsomiaproject.wsgi --log-file -
