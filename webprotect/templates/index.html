@@ -15,7 +15,7 @@
 <body>
     <!-- navbar 시작 -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">GSOMIA</a>
+        <a class="navbar-brand" href="/">GSOMIA</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
@@ -46,10 +46,12 @@
       <div class='jumbotron text-center' style = "background-image: url({% static 'img/background.jpg' %});">
           <div class='container'>
               <h1 id='hero-questions-h1'>DOM URL을 입력하세요</h1>
+              <form method="POST" action="{% url 'search' %}">{% csrf_token %}
               <div class="form-group input-group-lg">
-                  <input type="text" class="form-control" />
+                  <input name = "urltext" type="text" class="form-control" />
               </div>
-              <button type="button" id="continue-btn" class="btn btn-dark btn-block">Search</button>
+              <button type="submit" id="continue-btn" class="btn btn-dark btn-block">Search</button>
+            </form>
           </div>
       
           <div class='text-center'>
@@ -57,6 +59,10 @@
                 Copyright © G-somia
               </h2>
           </div>
+      </div>
+
+      <div class="container">
+        <h2>{{text}}</h2>
       </div>
 </body>
 </html>
