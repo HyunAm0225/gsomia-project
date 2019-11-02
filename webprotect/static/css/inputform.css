@@ -1,0 +1,87 @@
+.jumbotron {
+    height: 100vh;
+    margin-bottom: 0px !important;
+    background-size: cover;
+  }
+  
+  #hero-h1 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    padding-top: 10%;
+  }
+  
+  #hero-h2 {
+    color: #ECECEC;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 30px;
+    line-height: 40px;
+    padding-bottom: 40px;
+  }
+  
+  #hero-questions-h1 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    padding-top: 10%;
+    padding-bottom: 30px;
+  }
+  
+  .btn-success {
+    background-color: #66B878 !important;
+  }
+  
+  .form-control {
+    background-color: transparent !important;
+    color: white !important;
+  }
+  
+  #signup-btn {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  #continue-btn {
+    height: 60px;
+    font-size: 18px;
+  }
+  
+  #social-proof {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    font-style: italic;
+  }
+  
+  #social-proof-tagline {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+  }
+  
+  #tip {
+    color: #ECECEC;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+  
+  }
