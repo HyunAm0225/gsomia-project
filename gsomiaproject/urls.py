@@ -20,6 +20,6 @@ import webprotect.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',webprotect.views.index,name='index'),
-    path('search',webprotect.views.index,name='search'),
+    path('search',webprotect.views.search,name='search'),
 
 ]
