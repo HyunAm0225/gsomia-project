@@ -26,5 +26,6 @@ def search(request):
                     if _id in str(i):
                         print("PLEASE BETTER CHECK ON THIS")
                         print(str(i)) # this is real data ok?
-        print(data) # this is real data ok?
-    return render(request,'index.html',{'data':data})
+            print(data) # this is real data ok?
+        return render(request,'search.html',{'data':data})
+    return render(request,'index.html')
