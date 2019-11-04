@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,render_to_response,redirect
 import subprocess
 from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
+from django.template import RequestContext
 
 # Create your views here.
 
@@ -32,3 +33,15 @@ def search(request):
                         print(str(i)) # this is real data ok?
         return render(request,'search.html',{'data':data,'url':url})
     return render(request,'index.html')
+
+# 400에러(Error)
+def bad_request_page(request,exception):
+    return render(request,'error_400_page.html',status=400)
+
+# 404에러(Error)
+def page_not_found_page(request,exception):
+    return render(request,'error_404.page.html',status=404)
+
+# 500에러
+def server_error_page(request):
+    return render(request,'error_500_page.html',status=500)

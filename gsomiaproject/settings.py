@@ -25,7 +25,10 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
+
+# DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
+
+DEBUG = False # 개발자 보안을 위해 디버그는 개발 시에만 True 처리합니다.
 
 ALLOWED_HOSTS = ['*']
 

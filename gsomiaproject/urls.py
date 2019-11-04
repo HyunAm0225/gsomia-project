@@ -16,6 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import webprotect.views
+from django.conf.urls import url,handler400,handler404,handler500
+
+# 에러페이지 넘기기
+handler400 = 'webprotect.views.bad_request_page'
+handler404 = 'webprotect.views.page_not_found_page'
+handler500 = 'webprotect.views.server_error_page'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
